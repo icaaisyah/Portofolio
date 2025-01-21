@@ -1,0 +1,237 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    scroll-behavior: smooth;
+    font-family: poppins;
+}
+
+/* Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #95a5a6;
+    padding: 30px;
+    margin-top: 0%;
+}
+
+header {
+    /* background: #333; */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    display: flex;
+}
+
+header h1{
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+/* Default styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Elemen di kiri dan kanan */
+    align-items: center;
+    /* Agar navbar tetap stay */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #101c1d;
+    z-index: 1000;
+    border-radius: 20px;
+}
+
+.Ica {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0; /* Hilangkan margin default */
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-menu li {
+    margin: 0 15px; /* Spasi antar item menu */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after,
+.navbar a:focus::after {
+    width: 100%;
+} 
+section about {
+    margin-top: 60px; /* Agar konten tidak tertutup oleh navbar */
+    padding: 20px;
+    height: 800px; /* Konten panjang untuk menguji efek sticky */ 
+    background-color: #f4f4f4;
+}
+
+a {
+    color: rgb(31, 22, 83);
+}
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    margin-right: 100px;
+    flex: 1;
+    justify-content: right;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+section {
+    padding: 50px;
+    margin: 100px 0;
+    background: #7f8c8d; 
+    border-radius: 20px;
+}
+
+.content {
+    display: flex;
+    align-items: flex-start; /* Menyelaraskan gambar dengan teks */
+    gap: 1000px; /* Jarak antara gambar dan teks */
+    padding: 20px;
+    object-fit: cover;
+}
+.foto {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+    margin-bottom: 30px;
+    border-radius: 20px; /* Sudut melengkung lebih kecil untuk kesan profesional */
+    display: flex;
+    align-items: center;
+}
+
+p {
+    margin: 5px 0; /* Menambahkan sedikit jarak antar paragraf */
+    font-size: 16px; /* Ukuran teks nyaman dibaca */
+    color: #131212; /* Warna teks */
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.project { 
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.project p {
+    font-size: 20px;
+    color: #fff;
+}
+.project-item {
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    transition: transform 0.3s ease,filter 0.3s ease;
+    background-color: #333;
+    margin: 30px;
+}
+.project-item:hover {
+    transform: scale(1.1);
+}
+.project-image {
+    width: 500px;
+    height: 200px;
+    max-width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+.ica {
+    color: #fff;
+}
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .content {
+    flex-direction: column; /* Susun gambar dalam kolom pada layar kecil */
+    gap: 20px; /* Jarak lebih besar antar gambar */
+    }
+
+    .content img {
+    width: 100%; /* Gambar memenuhi lebar kontainer */
+    max-width: none; /* Menghilangkan batasan lebar gambar pada perangkat kecil */
+    }
+
+    .navbar {
+    display: flex; /* Mengatur elemen anak secara horizontal */
+    justify-content: center; /* Menempatkan elemen di tengah secara horizontal */
+    gap: 20px; /* Memberikan jarak antar elemen */ 
+}
+    .navbar-menu {
+    flex-direction: row;
+    align-items: center;
+    }
+    
+    .navbar-menu li {
+    margin: 10px 0; /* Spasi antar item menu */
+    }
+    
+    .navbar a {
+    text-decoration: none;
+    color: rgb(250, 246, 246);
+    padding: 10px 20px;
+    font-size: 18px; /* Sedikit lebih besar untuk layar kecil */   
+    }
+    .project{
+        padding: 30px;
+        flex-direction: row;
+        align-items: center;
+    } 
+    .project-item{
+        width: 500px;
+    }
+}
+
